@@ -1,0 +1,27 @@
+.logo-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rem;
+}
+
+.logo-img {
+  width: 15rem;
+  height: 15rem;
+}
+
+.bee-1-img-div {
+  display: flex;
+  height: 13rem;
+}
+
+.bee-2-img-div {
+  display: flex;
+  height: 13rem;
+  align-items: end;
+}
+
+.bee-img {
+  width: 5rem;
+  height: 5rem;
+}
