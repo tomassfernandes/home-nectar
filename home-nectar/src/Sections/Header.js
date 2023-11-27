@@ -12,10 +12,6 @@ export default function Header() {
           <img className="bee-img" src="/img/bee-2.webp" alt="Bee" />
         </div>
       </div>
-
-      <nav className="nav">
-        <a></a>
-      </nav>
     </header>
   );
 }

@@ -7,9 +7,20 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  font-family: "Roboto Slab", serif;
 }
 
 .section {
   max-width: 120rem;
   margin: 0 auto;
+}
+
+.heading-primary {
+  font-size: 4.6rem;
+  color: #e68613;
+  line-height: 1.2;
+}
+
+.heading-secondary {
+  font-family: "Pacifico", cursive;
 }
