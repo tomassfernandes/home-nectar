@@ -5,7 +5,7 @@ export default function CTASection() {
         <nav className="nav">
           <a className="nav-link">About</a>
           <a className="nav-link">Honey</a>
-          <a className="nav-link">Place</a>
+          <a className="nav-link">Farm</a>
           <a className="nav-link">Contact</a>
         </nav>
         <div className="cta-grid">
@@ -22,7 +22,11 @@ export default function CTASection() {
             <button className="cta-btn">FIND MORE</button>
           </div>
           <div className="cta-img-div">
-            <img className="cta-img" src="/img/cta-img.webp" />
+            <img
+              className="cta-img"
+              src="/img/cta-img.webp"
+              alt="Honey jar with bees"
+            />
           </div>
         </div>
 

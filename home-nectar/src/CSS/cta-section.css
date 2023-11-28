@@ -66,8 +66,8 @@
   background-color: #a7d5e5;
   height: 40rem;
   width: 100%;
-  position: absolute;
-  top: 50rem;
+  position: relative;
+  top: -30rem;
   left: 0;
   z-index: -99;
 }
@@ -85,7 +85,7 @@
 .custom-shape-divider-bottom-1701100644 svg {
   position: relative;
   display: block;
-  width: 100%;
+  width: calc(100% + 1.3px);
   height: 72px;
 }
 
@@ -106,12 +106,12 @@
 .custom-shape-divider-bottom-1701102928 svg {
   position: relative;
   display: block;
-  width: 100%;
+  width: calc(100% + 1.3px);
   height: 72px;
 }
 
 .custom-shape-divider-bottom-1701102928 .shape-fill {
-  fill: #ffffff;
+  fill: white;
 }
 
 .custom-shape-divider-top-1701103328 {
@@ -132,5 +132,5 @@
 }
 
 .custom-shape-divider-top-1701103328 .shape-fill {
-  fill: #ffffff;
+  fill: white;
 }

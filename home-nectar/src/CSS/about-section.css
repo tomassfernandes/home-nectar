@@ -1,0 +1,89 @@
+.about-section {
+  margin-top: -23rem;
+  position: relative;
+}
+
+.about-main-div {
+  background-image: url("/public/img/about-background-img.webp");
+  background-size: cover; /* Adjust as needed */
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80rem;
+  position: relative;
+}
+
+.about-p-div {
+  position: absolute;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.about-p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.about-p-span {
+  color: #e68613;
+  font-family: "Pacifico", cursive;
+}
+
+.about-p-div-1 {
+  top: 22.5rem;
+  left: 67rem;
+}
+
+.about-p-div-2 {
+  top: 36.5rem;
+  left: 18rem;
+}
+
+.about-p-div-3 {
+  top: 60.5rem;
+  left: 73rem;
+}
+
+.about-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.about-decorative-img {
+  width: 100%;
+}
+
+.about-decorative-div-position-1 {
+  height: 30rem;
+  width: 30rem;
+  position: absolute;
+  right: 0;
+  top: 46%;
+}
+
+.about-decorative-div-position-2 {
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  left: -2rem;
+  top: 15rem;
+}
+
+.about-decorative-div-position-3 {
+  height: 5rem;
+  width: 5rem;
+  position: absolute;
+  left: 35rem;
+  top: 75rem;
+}
+
+.about-decorative-div-position-4 {
+  height: 13rem;
+  width: 13rem;
+  position: absolute;
+  left: 18rem;
+  top: 65rem;
+}
