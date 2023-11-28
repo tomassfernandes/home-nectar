@@ -1,3 +1,66 @@
 .honey-section {
   padding: 9.6rem 0;
 }
+
+.honey-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4.2rem;
+  margin-top: 3.6rem;
+}
+
+.honey-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.6rem 0.8rem;
+  background-color: #a7d5e5;
+  border-radius: 8px;
+  gap: 1.2rem;
+  position: relative;
+}
+
+.honey-img-div {
+  width: 60%;
+}
+
+.honey-img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.honey-flower-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.honey-h3 {
+  text-align: center;
+  font-size: 2.6rem;
+}
+
+.honey-p {
+  text-align: center;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.honey-amount-span {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-size: 1.6rem;
+  color: #73430a;
+  font-weight: 700;
+}
+
+.honey-price-span {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.6rem;
+  color: #73430a;
+  font-weight: 700;
+}
