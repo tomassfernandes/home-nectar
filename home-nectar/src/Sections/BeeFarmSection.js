@@ -33,87 +33,95 @@ export default function BeeFarmSection() {
   );
 
   return (
-    <section className="section bee-farm-section">
-      <h2 className="heading-secondary">Bee Farm</h2>
-      <div className="bee-farm-grid">
-        <div className="bee-farm-div">
-          <div className="bee-farm-intro-div">
-            <p className="bee-farm-intro-main-p">
-              Nestled in the heart of nature, our apiary is dedicated to the
-              delicate craft of beekeeping
-            </p>
-            <p className="bee-farm-intro-p">
-              Producing exceptional honey and emphasizing the crucial role bees
-              play in our ecosystem
-            </p>
-          </div>
-
-          <div className="bee-farm-topics-div bee-topic">
-            <div className="bee-farm-topic-icon-div">
-              <span className="bee-farm-bee-icon">{beeIcon}</span>
-              <p className="bee-farm-icon-p">THE BUZZING ARCHITECTS</p>
-            </div>
-            <div className="bee-farm-text-content-div">
-              <h3 className="bee-farm-h3">Our Bees</h3>
-              <p className="bee-farm-content-p">
-                Meet our extraordinary residents, the honeybees. Beyond being
-                mere honey producers, these industrious insects serve as
-                nature's architects. Darting from blossom to blossom, they
-                collect nectar and pollinate local flora, ensuring the rich
-                biodiversity that envelops our farm
+    <section className="bee-farm-background">
+      <img
+        className="farm-background-img"
+        src="/img/Farm-background.png"
+        alt="Background lines"
+      />
+      <div className="section bee-farm-section">
+        <h2 className="heading-secondary">Bee Farm</h2>
+        <div className="bee-farm-grid">
+          <div className="bee-farm-div">
+            <div className="bee-farm-intro-div">
+              <p className="bee-farm-intro-main-p">
+                Nestled in the heart of nature, our apiary is dedicated to the
+                delicate craft of beekeeping
               </p>
-            </div>
-            <div className="bee-farm-img-div">
-              <img className="bee-farm-img" src="/img/bees.webp" alt="Bees" />
-            </div>
-          </div>
-        </div>
-
-        <div className="bee-farm-div">
-          <div className="bee-farm-topics-div beekeeper-topic">
-            <div className="bee-farm-topic-icon-div">
-              <span className="bee-farm-beekeeper-icon">{beeHiveIcon}</span>
-              <p className="bee-farm-icon-p">GUARDIANS OF THE HIVE</p>
-            </div>
-
-            <div className="bee-farm-text-content-div">
-              <h3 className="bee-farm-h3">Dedicated Beekeepers</h3>
-              <p className="bee-farm-content-p">
-                Behind each jar of honey lies the dedication of our skilled
-                beekeepers. Trained in the ancient art of apiculture, our team
-                tends to the hives with precision and care. Their expertise
-                ensures the health and prosperity of our bee colonies, fostering
-                environments that allow these remarkable insects to thrive
+              <p className="bee-farm-intro-p">
+                Producing exceptional honey and emphasizing the crucial role
+                bees play in our ecosystem
               </p>
             </div>
 
-            <div className="bee-farm-img-div">
-              <img
-                className="bee-farm-img"
-                src="/img/bee-hive.webp"
-                alt="Bees"
-              />
+            <div className="bee-farm-topics-div bee-topic">
+              <div className="bee-farm-topic-icon-div">
+                <span className="bee-farm-bee-icon">{beeIcon}</span>
+                <p className="bee-farm-icon-p">THE BUZZING ARCHITECTS</p>
+              </div>
+              <div className="bee-farm-text-content-div">
+                <h3 className="bee-farm-h3">Our Bees</h3>
+                <p className="bee-farm-content-p">
+                  Meet our extraordinary residents, the honeybees. Beyond being
+                  mere honey producers, these industrious insects serve as
+                  nature's architects. Darting from blossom to blossom, they
+                  collect nectar and pollinate local flora, ensuring the rich
+                  biodiversity that envelops our farm
+                </p>
+              </div>
+              <div className="bee-farm-img-div">
+                <img className="bee-farm-img" src="/img/bees.webp" alt="Bees" />
+              </div>
             </div>
           </div>
 
-          <div className="bee-farm-topics-div farm-topic">
-            <div className="bee-farm-topic-icon-div">
-              <span className="bee-farm-farm-icon">{farmIcon}</span>
-              <p className="bee-farm-icon-p">NATURE AND NURTURING</p>
+          <div className="bee-farm-div">
+            <div className="bee-farm-topics-div beekeeper-topic">
+              <div className="bee-farm-topic-icon-div">
+                <span className="bee-farm-beekeeper-icon">{beeHiveIcon}</span>
+                <p className="bee-farm-icon-p">GUARDIANS OF THE HIVE</p>
+              </div>
+
+              <div className="bee-farm-text-content-div">
+                <h3 className="bee-farm-h3">Dedicated Beekeepers</h3>
+                <p className="bee-farm-content-p">
+                  Behind each jar of honey lies the dedication of our skilled
+                  beekeepers. Trained in the ancient art of apiculture, our team
+                  tends to the hives with precision and care. Their expertise
+                  ensures the health and prosperity of our bee colonies,
+                  fostering environments that allow these remarkable insects to
+                  thrive
+                </p>
+              </div>
+
+              <div className="bee-farm-img-div">
+                <img
+                  className="bee-farm-img"
+                  src="/img/bee-hive.webp"
+                  alt="Bees"
+                />
+              </div>
             </div>
 
-            <div className="bee-farm-text-content-div">
-              <h3 className="bee-farm-h3">The Farm</h3>
-              <p className="bee-farm-content-p">
-                Our bee farm is a serene blend of nature and nurturing.
-                Surrounded by wildflowers and embraced by the gentle hum of
-                bees, our farm is a testament to the symbiotic relationship
-                between humans and nature
-              </p>
-            </div>
+            <div className="bee-farm-topics-div farm-topic">
+              <div className="bee-farm-topic-icon-div">
+                <span className="bee-farm-farm-icon">{farmIcon}</span>
+                <p className="bee-farm-icon-p">NATURE AND NURTURING</p>
+              </div>
 
-            <div className="bee-farm-img-div">
-              <img className="bee-farm-img" src="/img/farm.webp" alt="Bees" />
+              <div className="bee-farm-text-content-div">
+                <h3 className="bee-farm-h3">The Farm</h3>
+                <p className="bee-farm-content-p">
+                  Our bee farm is a serene blend of nature and nurturing.
+                  Surrounded by wildflowers and embraced by the gentle hum of
+                  bees, our farm is a testament to the symbiotic relationship
+                  between humans and nature
+                </p>
+              </div>
+
+              <div className="bee-farm-img-div">
+                <img className="bee-farm-img" src="/img/farm.webp" alt="Bees" />
+              </div>
             </div>
           </div>
         </div>

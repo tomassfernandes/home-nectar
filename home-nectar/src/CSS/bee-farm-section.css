@@ -1,3 +1,15 @@
+.bee-farm-background {
+  position: relative;
+}
+
+.farm-background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -99;
+}
+
 .bee-farm-section {
   display: flex;
   flex-direction: column;
@@ -11,7 +23,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 2.4rem;
-  row-gap: 3.6rem;
 }
 
 .bee-farm-intro-div {
@@ -19,6 +30,10 @@
   flex-direction: column;
   gap: 0.8rem;
   padding: 2.6rem;
+  background-color: #d3eaf2;
+  margin-bottom: 2.6rem;
+  border-radius: 10px;
+  border: 2px solid #73430a;
 }
 
 .bee-farm-intro-main-p {
@@ -38,10 +53,11 @@
   gap: 0.8rem;
   padding: 2.6rem;
   border-radius: 10px;
+  border: 2px solid #73430a;
 }
 
 .bee-topic {
-  background-color: #e9aa1736;
+  background-color: #fbeed1;
 }
 
 .bee-farm-topic-icon-div {
@@ -89,7 +105,7 @@
 }
 
 .beekeeper-topic {
-  background-color: #73440a58;
+  background-color: #e3d9ce;
 }
 
 .bee-farm-beekeeper-icon svg {
@@ -97,7 +113,7 @@
 }
 
 .farm-topic {
-  background-color: #e687134d;
+  background-color: #fae7d0;
   margin-top: 2.6rem;
 }
 
