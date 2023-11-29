@@ -45,6 +45,7 @@ export default function HoneyItem() {
         <h3 className="heading-terciary honey-h3">{item.name}</h3>
         <p className="honey-p">{item.text}</p>
       </div>
+      <button className="honey-btn">ADD TO CART</button>
       <span className="honey-amount-span">{item.amount}</span>
       <span className="honey-price-span">{`${item.price}€`}</span>
     </div>

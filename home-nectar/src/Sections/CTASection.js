@@ -19,7 +19,7 @@ export default function CTASection() {
               goodness of nature, creating moments of delight with every golden
               drop. Join us on this sweet journey!
             </p>
-            <button className="cta-btn">FIND MORE</button>
+            <button className="cta-btn">Find More</button>
           </div>
           <div className="cta-img-div">
             <img

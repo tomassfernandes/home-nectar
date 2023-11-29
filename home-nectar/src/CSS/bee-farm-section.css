@@ -1,0 +1,106 @@
+.bee-farm-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bee-farm-grid {
+  width: 70%;
+  margin-top: 4.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.4rem;
+  row-gap: 3.6rem;
+}
+
+.bee-farm-intro-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 2.6rem;
+}
+
+.bee-farm-intro-main-p {
+  font-size: 2.2rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.bee-farm-intro-p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.bee-farm-topics-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 2.6rem;
+  border-radius: 10px;
+}
+
+.bee-topic {
+  background-color: #e9aa1736;
+}
+
+.bee-farm-topic-icon-div {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.bee-farm-icon-p {
+  color: #333;
+  font-size: 0.8rem;
+}
+
+.bee-farm-bee-icon svg {
+  fill: #e9ab17;
+}
+
+.bee-farm-text-content-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.bee-farm-h3 {
+  font-size: 3.2rem;
+  color: #333;
+}
+
+.bee-farm-content-p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.bee-farm-img-div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 1.2rem;
+}
+
+.bee-farm-img {
+  width: 40%;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.beekeeper-topic {
+  background-color: #73440a58;
+}
+
+.bee-farm-beekeeper-icon svg {
+  fill: #73430a;
+}
+
+.farm-topic {
+  background-color: #e687134d;
+  margin-top: 2.6rem;
+}
+
+.bee-farm-farm-icon svg {
+  fill: #e68613;
+}

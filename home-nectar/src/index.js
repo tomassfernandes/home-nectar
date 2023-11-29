@@ -6,6 +6,7 @@ import "./CSS/header.css";
 import "./CSS/cta-section.css";
 import "./CSS/about-section.css";
 import "./CSS/honey-section.css";
+import "./CSS/bee-farm-section.css";
 
 import App from "./App";
 
