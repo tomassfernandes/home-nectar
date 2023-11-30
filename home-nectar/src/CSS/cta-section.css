@@ -50,6 +50,12 @@
   font-weight: 600;
   margin-top: 1.2rem;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cta-btn:hover {
+  box-shadow: 0 0 15px rgba(230, 134, 19, 0.8);
+  letter-spacing: 0.1rem;
 }
 
 .cta-img-div {

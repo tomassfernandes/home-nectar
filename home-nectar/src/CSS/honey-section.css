@@ -59,6 +59,12 @@
   font-weight: 700;
   margin-top: 1.6rem;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+.honey-btn:hover {
+  background-color: #382104;
+  color: #3ea7ca;
 }
 
 .honey-amount-span {

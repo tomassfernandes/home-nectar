@@ -4,6 +4,7 @@ import AboutSection from "./Sections/AboutSection";
 import HoneySection from "./Sections/HoneySection";
 import BeeFarmSection from "./Sections/BeeFarmSection";
 import ChooseUsSection from "./Sections/ChooseUsSection";
+import Footer from "./Sections/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <HoneySection />
       <BeeFarmSection />
       <ChooseUsSection />
+      <Footer />
     </>
   );
 }
