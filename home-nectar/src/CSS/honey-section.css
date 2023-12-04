@@ -22,6 +22,7 @@
   gap: 1.2rem;
   position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
 }
 
 .honey-img-div {
