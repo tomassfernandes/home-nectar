@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function HoneyItem() {
   const honeysData = [
     {
@@ -32,7 +34,7 @@ export default function HoneyItem() {
   ];
 
   return honeysData.map((item) => (
-    <div className="honey-div">
+    <Link key={item.id} to={`/product/${item.id}`} className="honey-div">
       <div className="honey-img-div">
         <img className="honey-img" src={item.img} alt={`${item.name} honey`} />
       </div>
@@ -48,6 +50,6 @@ export default function HoneyItem() {
       <button className="honey-btn">ADD TO CART</button>
       <span className="honey-amount-span">{item.amount}</span>
       <span className="honey-price-span">{`${item.price}€`}</span>
-    </div>
+    </Link>
   ));
 }
