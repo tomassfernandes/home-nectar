@@ -10,6 +10,8 @@ import "./CSS/bee-farm-section.css";
 import "./CSS/choose-us-section.css";
 import "./CSS/footer.css";
 
+import "./CSS/product-page.css";
+
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
