@@ -1,0 +1,61 @@
+.cart-icon-main-div {
+  position: absolute;
+  right: 6rem;
+  top: 2rem;
+  cursor: pointer;
+}
+
+.cta-content-section .cart-icon-main-div {
+  top: 4.2rem;
+  right: 12rem;
+}
+
+.cart-icon svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.cart-icon-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cart-icon-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  top: -0.5rem;
+  right: -1rem;
+  font-size: 1.2rem;
+}
+
+.cart-section {
+  height: 100vh;
+  width: 30%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #333;
+  z-index: 1;
+  padding: 2.2rem;
+}
+
+.shopping-cart-close-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-close-icon svg {
+  height: 3rem;
+  width: 3rem;
+  color: white;
+}

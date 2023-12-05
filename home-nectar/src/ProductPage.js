@@ -1,15 +1,23 @@
 // ProductPage.js
 import { useLocation } from "react-router-dom";
 import Header from "./Sections/Header";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Footer from "./Sections/Footer";
+import CartIcon from "./Items/CartIcon";
+import CartSection from "./Sections/CartSection";
 
 export default function ProductPage({ honeysData }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const location = useLocation();
   const productId = Number(location.pathname.split("/")[2]); // Extracting the product id from the URL
   const selectedHoney = honeysData.find((item) => item.id === productId);
 
   const [quantity, setQuantity] = useState(1);
   const [totalPrice, setTotalPrice] = useState(selectedHoney.price);
+  const [cartItemsQuantity, setCartitemsQuantity] = useState(0);
 
   function handleAddProduct() {
     setQuantity(quantity + 1);
@@ -23,6 +31,10 @@ export default function ProductPage({ honeysData }) {
     }
   }
 
+  function handleCartItems() {
+    setCartitemsQuantity(cartItemsQuantity + 1);
+  }
+
   if (!selectedHoney) {
     // Handle case where there is no data (optional)
     return <div>No data found</div>;
@@ -30,11 +42,13 @@ export default function ProductPage({ honeysData }) {
 
   return (
     <>
+      <CartSection honeysCartData={selectedHoney} />
       <Header />
       <h1 className="heading-primary-product-page">
         {selectedHoney.name} Honey
       </h1>
-      <div className="section">
+      <div className="section product-section">
+        <CartIcon cartItemsQuantity={cartItemsQuantity} />
         <div className="product-page-grid">
           <div className="product-page-img-div">
             <img
@@ -64,15 +78,39 @@ export default function ProductPage({ honeysData }) {
                   +
                 </span>
               </div>
-              <p className="product-page-quantity-text">{totalPrice}</p>
+              <p className="product-page-quantity-text">{`${totalPrice.toFixed(
+                2
+              )}€`}</p>
             </div>
             <div className="product-page-btn-div">
-              <button className="product-page-btn cart-btn">ADD TO CART</button>
+              <button
+                className="product-page-btn cart-btn"
+                onClick={handleCartItems}
+              >
+                ADD TO CART
+              </button>
               <button className="product-page-btn buy-btn">BUY NOW</button>
             </div>
           </div>
         </div>
+
+        <div className="product-info-main-div">
+          <div className="product-info-div">
+            <p className="info-title">Flower:</p>
+            <p className="info-text">{selectedHoney.name}</p>
+          </div>
+          <div className="product-info-div">
+            <p className="info-title">Weight:</p>
+            <p className="info-text">{selectedHoney.amount}</p>
+          </div>
+
+          <div className="product-info-div">
+            <p className="info-title">Region:</p>
+            <p className="info-text">{selectedHoney.region}</p>
+          </div>
+        </div>
       </div>
+      <Footer />
     </>
   );
 }

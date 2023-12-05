@@ -1,7 +1,10 @@
+import CartIcon from "../Items/CartIcon";
+
 export default function CTASection() {
   return (
     <section>
       <div className="section cta-content-section">
+        <CartIcon />
         <nav className="nav">
           <a className="nav-link">About</a>
           <a className="nav-link">Honey</a>

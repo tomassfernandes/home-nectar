@@ -9,6 +9,7 @@ import "./CSS/honey-section.css";
 import "./CSS/bee-farm-section.css";
 import "./CSS/choose-us-section.css";
 import "./CSS/footer.css";
+import "./CSS/cart-section.css";
 
 import "./CSS/product-page.css";
 
