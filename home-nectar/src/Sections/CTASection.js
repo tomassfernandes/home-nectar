@@ -1,10 +1,17 @@
 import CartIcon from "../Items/CartIcon";
+import { useState } from "react";
 
 export default function CTASection() {
+  const [isCartSectionActive, setIsCartSectionActive] = useState(false);
+
+  const openCartSection = () => {
+    setIsCartSectionActive(true);
+  };
+
   return (
     <section>
       <div className="section cta-content-section">
-        <CartIcon />
+        <CartIcon onClick={openCartSection} />
         <nav className="nav">
           <a className="nav-link">About</a>
           <a className="nav-link">Honey</a>

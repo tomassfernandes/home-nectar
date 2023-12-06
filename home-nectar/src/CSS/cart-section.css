@@ -155,8 +155,10 @@
 
 .total-buy-main-div {
   position: absolute;
-  width: 88%;
+  width: 90%;
   bottom: 2.2rem;
+  z-index: 1;
+  background-color: #333;
 }
 
 .total-buy-div {
@@ -189,4 +191,22 @@
 
 .delete-item {
   display: none;
+}
+
+.cart-content-main-div-scroll {
+  height: 90%;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #e68613; /* Set the color of the scrollbar thumb */
+    border-radius: 5px; /* Optional: Add rounded corners to the thumb */
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #333; /* Set the color of the scrollbar track */
+  }
 }

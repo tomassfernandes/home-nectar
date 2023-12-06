@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Footer from "./Sections/Footer";
 import CartIcon from "./Items/CartIcon";
 import CartSection from "./Sections/CartSection";
+import { useCart } from "./CartContext";
 
 export default function ProductPage({ honeysData }) {
   useEffect(() => {
@@ -12,6 +13,8 @@ export default function ProductPage({ honeysData }) {
   }, []);
 
   const [isCartSectionActive, setIsCartSectionActive] = useState(false);
+
+  const { dispatch } = useCart();
 
   const openCartSection = () => {
     setIsCartSectionActive(true);
@@ -27,7 +30,6 @@ export default function ProductPage({ honeysData }) {
 
   const [quantity, setQuantity] = useState(1);
   const [totalPrice, setTotalPrice] = useState(selectedHoney.price);
-  const [cartItemsQuantity, setCartitemsQuantity] = useState(0);
 
   function handleAddProduct() {
     setQuantity(quantity + 1);
@@ -42,7 +44,16 @@ export default function ProductPage({ honeysData }) {
   }
 
   function handleCartItems() {
-    setCartitemsQuantity(cartItemsQuantity + 1);
+    dispatch({
+      type: "ADD_TO_CART",
+      payload: {
+        img: selectedHoney.img,
+        id: selectedHoney.id + Date.now(), // Generate a unique ID using current timestamp
+        name: selectedHoney.name,
+        price: totalPrice,
+        quantity,
+      },
+    });
   }
 
   if (!selectedHoney) {
@@ -52,24 +63,13 @@ export default function ProductPage({ honeysData }) {
 
   return (
     <>
-      <CartSection
-        honeysCartData={selectedHoney}
-        isActive={isCartSectionActive}
-        onClick={closeCartSection}
-        cartItemQuantity={quantity}
-        cartItemPrice={totalPrice}
-        handleAddItem={handleAddProduct}
-        handleRemoveItem={handleRemoveProduct}
-      />
+      <CartSection isActive={isCartSectionActive} onClick={closeCartSection} />
       <Header />
       <h1 className="heading-primary-product-page">
         {selectedHoney.name} Honey
       </h1>
       <div className="section product-section">
-        <CartIcon
-          cartItemsQuantity={cartItemsQuantity}
-          onClick={openCartSection}
-        />
+        <CartIcon onClick={openCartSection} />
         <div className="product-page-grid">
           <div className="product-page-img-div">
             <img

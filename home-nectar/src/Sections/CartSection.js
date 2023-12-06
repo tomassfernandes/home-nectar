@@ -1,36 +1,38 @@
-import { useState } from "react";
+import React from "react";
+import { useCart } from "../CartContext";
 
-export default function CartSection({
-  honeysCartData,
-  cartItemQuantity,
-  cartItemPrice,
-  isActive,
-  onClick,
-  handleAddItem,
-  handleRemoveItem,
-}) {
+export default function CartSection({ isActive, onClick }) {
+  const { cartState, dispatch } = useCart();
+  const { cartItems } = cartState;
+
   const closeIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      class="ionicon"
+      className="ionicon"
       viewBox="0 0 512 512"
     >
       <path
         fill="none"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="32"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
         d="M368 368L144 144M368 144L144 368"
       />
     </svg>
   );
 
-  const [deleteItem, setDeleteItem] = useState(false);
+  const handleDeleteItem = (itemId) => {
+    console.log("Deleting item with ID:", itemId);
+    dispatch({
+      type: "REMOVE_FROM_CART",
+      payload: { id: itemId },
+    });
+  };
 
-  function handleDeleteItem() {
-    setDeleteItem(true);
-  }
+  const calculateTotalPrice = () => {
+    return cartItems.reduce((total, item) => total + item.price, 0);
+  };
 
   return (
     <div
@@ -46,57 +48,44 @@ export default function CartSection({
       </div>
 
       <div className="cart-content-big-div">
-        <div
-          className={`cart-content-main-div ${deleteItem ? "delete-item" : ""}`}
-        >
-          <div className="cart-img-div">
-            <img
-              className="cart-img"
-              src={honeysCartData.img}
-              alt={`${honeysCartData.name} honey`}
-            />
-          </div>
-          <div className="cart-content-text-main-div">
-            <div className="cart-content-div">
-              <p className="cart-text">{honeysCartData.name}</p>
-              <p className="cart-text">{cartItemPrice}</p>
-            </div>
-            <div className="cart-content-div">
-              <div className="cart-adding-quantity-div">
-                <span
-                  className="cart-adding-mini-div  cart-add-remove-btn cart-text"
-                  onClick={handleRemoveItem}
-                >
-                  -
-                </span>
-                <p className="cart-adding-mini-div">
-                  <p className="cart-mini-div-item-quantity">
-                    {cartItemQuantity}
-                  </p>
-                </p>
-                <span
-                  className="cart-adding-mini-div cart-add-remove-btn cart-text"
-                  onClick={handleAddItem}
-                >
-                  +
-                </span>
+        <div className="cart-content-main-div-scroll">
+          {cartItems.map((item) => (
+            <div key={item.id} className="cart-content-main-div">
+              <div className="cart-img-div">
+                <img
+                  className="cart-img"
+                  src={item.img}
+                  alt={`${item.name} honey`}
+                />
               </div>
-              <span
-                className="cart-item-delete-icon"
-                onClick={handleDeleteItem}
-              >
-                {closeIcon}
-              </span>
+              <div className="cart-content-text-main-div">
+                <div className="cart-content-div">
+                  <p className="cart-text">{item.name}</p>
+                  <p className="cart-text">{item.price}</p>
+                </div>
+                <div className="cart-content-div">
+                  <div className="cart-adding-quantity-div">
+                    <p className="cart-adding-mini-div">
+                      <p className="cart-text">{`Qt: ${item.quantity}`}</p>
+                    </p>
+                  </div>
+                  <span
+                    className="cart-item-delete-icon"
+                    onClick={() => handleDeleteItem(item.id)}
+                  >
+                    {closeIcon}
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
-
         <div className="total-buy-main-div">
           <div className="dotted-div"></div>
           <div className="total-buy-div">
             <div className="total-div">
               <p className="your-shopping-cart-text">Subtotal</p>
-              <p className="cart-text">{cartItemPrice}</p>
+              <p className="cart-text">{calculateTotalPrice().toFixed(2)}</p>
             </div>
             <div className="buy-div">
               <button className="cart-buy-btn">BUY NOW</button>

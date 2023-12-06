@@ -1,4 +1,12 @@
-export default function CartIcon({ cartItemsQuantity, onClick }) {
+import { useCart } from "../CartContext";
+
+export default function CartIcon({ onClick }) {
+  const { cartState } = useCart();
+  const { cartItems } = cartState;
+
+  // Calculate the total count of unique items in the cart
+  const uniqueItemCount = new Set(cartItems.map((item) => item.id)).size;
+
   const cartIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -48,8 +56,8 @@ export default function CartIcon({ cartItemsQuantity, onClick }) {
     <div className="cart-icon-main-div" onClick={onClick}>
       <div className="cart-icon-div">
         <span className="cart-icon">{cartIcon}</span>
-        {cartItemsQuantity > 0 && (
-          <div className="cart-icon-number">{cartItemsQuantity}</div>
+        {uniqueItemCount > 0 && (
+          <div className="cart-icon-number">{uniqueItemCount}</div>
         )}
       </div>
     </div>
