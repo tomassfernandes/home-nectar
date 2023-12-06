@@ -11,6 +11,16 @@ export default function ProductPage({ honeysData }) {
     window.scrollTo(0, 0);
   }, []);
 
+  const [isCartSectionActive, setIsCartSectionActive] = useState(false);
+
+  const openCartSection = () => {
+    setIsCartSectionActive(true);
+  };
+
+  const closeCartSection = () => {
+    setIsCartSectionActive(false);
+  };
+
   const location = useLocation();
   const productId = Number(location.pathname.split("/")[2]); // Extracting the product id from the URL
   const selectedHoney = honeysData.find((item) => item.id === productId);
@@ -42,13 +52,24 @@ export default function ProductPage({ honeysData }) {
 
   return (
     <>
-      <CartSection honeysCartData={selectedHoney} />
+      <CartSection
+        honeysCartData={selectedHoney}
+        isActive={isCartSectionActive}
+        onClick={closeCartSection}
+        cartItemQuantity={quantity}
+        cartItemPrice={totalPrice}
+        handleAddItem={handleAddProduct}
+        handleRemoveItem={handleRemoveProduct}
+      />
       <Header />
       <h1 className="heading-primary-product-page">
         {selectedHoney.name} Honey
       </h1>
       <div className="section product-section">
-        <CartIcon cartItemsQuantity={cartItemsQuantity} />
+        <CartIcon
+          cartItemsQuantity={cartItemsQuantity}
+          onClick={openCartSection}
+        />
         <div className="product-page-grid">
           <div className="product-page-img-div">
             <img
@@ -63,7 +84,7 @@ export default function ProductPage({ honeysData }) {
               <p className="product-page-quantity-text">Quantity</p>
               <div className="adding-quantity-div">
                 <span
-                  className="adding-mini-div product-page-quantity-text remove-product"
+                  className="adding-mini-div product-page-quantity-text"
                   onClick={handleRemoveProduct}
                 >
                   -
@@ -72,7 +93,7 @@ export default function ProductPage({ honeysData }) {
                   {quantity}
                 </p>
                 <span
-                  className="adding-mini-div product-page-quantity-text add-product"
+                  className="adding-mini-div product-page-quantity-text"
                   onClick={handleAddProduct}
                 >
                   +

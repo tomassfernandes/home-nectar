@@ -1,4 +1,4 @@
-export default function CartIcon({ cartItemsQuantity }) {
+export default function CartIcon({ cartItemsQuantity, onClick }) {
   const cartIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ export default function CartIcon({ cartItemsQuantity }) {
   );
 
   return (
-    <div className="cart-icon-main-div">
+    <div className="cart-icon-main-div" onClick={onClick}>
       <div className="cart-icon-div">
         <span className="cart-icon">{cartIcon}</span>
         {cartItemsQuantity > 0 && (

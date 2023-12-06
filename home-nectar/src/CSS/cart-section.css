@@ -46,6 +46,16 @@
   background-color: #333;
   z-index: 1;
   padding: 2.2rem;
+  border-left: 2px solid #e68613;
+  transition: all 0.5s;
+}
+
+.cart-section-no-active {
+  transform: translateX(100%);
+}
+
+.cart-section-active {
+  transform: translateX(0%);
 }
 
 .shopping-cart-close-div {
@@ -58,4 +68,125 @@
   height: 3rem;
   width: 3rem;
   color: white;
+  cursor: pointer;
+}
+
+.your-shopping-cart-text {
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: underline;
+}
+
+.cart-img-div {
+  padding: 1.2rem;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-img {
+  width: 100%;
+}
+
+.cart-content-big-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+}
+
+.cart-content-main-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.cart-content-text-main-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+
+.cart-content-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.2rem;
+}
+
+.cart-item-delete-icon svg {
+  height: 2rem;
+  width: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.cart-adding-quantity-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.cart-mini-div-item-quantity {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+}
+
+.cart-add-remove-btn {
+  cursor: pointer;
+}
+
+.cart-text {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.dotted-div {
+  height: 2rem;
+  width: 100%;
+  border-top: dashed 4px white;
+}
+
+.total-buy-main-div {
+  position: absolute;
+  width: 88%;
+  bottom: 2.2rem;
+}
+
+.total-buy-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total-div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.cart-buy-btn {
+  width: 12rem;
+  height: 3rem;
+  background-color: #e68613;
+  border: 2px solid #73430a;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cart-buy-btn:hover {
+  background-color: #333;
+  border: 2px solid #e68613;
+}
+
+.delete-item {
+  display: none;
 }
