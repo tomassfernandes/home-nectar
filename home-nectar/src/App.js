@@ -9,6 +9,8 @@ import ChooseUsSection from "./Sections/ChooseUsSection";
 import Footer from "./Sections/Footer";
 import ProductPage from "./ProductPage";
 
+import { useState } from "react";
+
 function App() {
   const honeysData = [
     {
@@ -45,6 +47,12 @@ function App() {
     },
   ];
 
+  const [isCartSectionActive, setIsCartSectionActive] = useState(false);
+
+  const openCartSection = () => {
+    setIsCartSectionActive(true);
+  };
+
   return (
     <Router>
       <Routes>
@@ -53,9 +61,12 @@ function App() {
           element={
             <>
               <Header />
-              <CTASection />
+              <CTASection openCartSection={openCartSection} />
               <AboutSection />
-              <HoneySection honeysData={honeysData} />
+              <HoneySection
+                honeysData={honeysData}
+                openCartSection={openCartSection}
+              />
               <BeeFarmSection />
               <ChooseUsSection />
               <Footer />
