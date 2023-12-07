@@ -8,6 +8,7 @@ import BeeFarmSection from "./Sections/BeeFarmSection";
 import ChooseUsSection from "./Sections/ChooseUsSection";
 import Footer from "./Sections/Footer";
 import ProductPage from "./ProductPage";
+import CartSection from "./Sections/CartSection";
 
 import { useState } from "react";
 
@@ -53,6 +54,10 @@ function App() {
     setIsCartSectionActive(true);
   };
 
+  const closeCartSection = () => {
+    setIsCartSectionActive(false);
+  };
+
   return (
     <Router>
       <Routes>
@@ -61,6 +66,10 @@ function App() {
           element={
             <>
               <Header />
+              <CartSection
+                isActive={isCartSectionActive}
+                onClick={closeCartSection}
+              />
               <CTASection openCartSection={openCartSection} />
               <AboutSection />
               <HoneySection
