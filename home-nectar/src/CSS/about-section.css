@@ -11,6 +11,7 @@
   width: 100%;
   height: 80rem;
   position: relative;
+  margin: 0 auto;
 }
 
 .about-p-div {
@@ -32,18 +33,18 @@
 }
 
 .about-p-div-1 {
-  top: 22.5rem;
-  left: 67rem;
+  top: 28.5%;
+  left: 55%;
 }
 
 .about-p-div-2 {
-  top: 36.5rem;
-  left: 18rem;
+  top: 45.5%;
+  left: 15%;
 }
 
 .about-p-div-3 {
-  top: 60.5rem;
-  left: 73rem;
+  top: 75.5%;
+  left: 59%;
 }
 
 .about-ul {

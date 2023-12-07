@@ -19,6 +19,23 @@
   font-size: 1.4rem;
   color: #333;
   cursor: pointer;
+  transition: all 0.3s;
+  width: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 2px solid white;
+}
+
+.nav-link:hover {
+  color: #e68613;
+  border-bottom: 2px solid #e68613;
+  font-weight: 700;
+}
+
+.nav-link-img {
+  width: 100%;
 }
 
 .cta-grid {
