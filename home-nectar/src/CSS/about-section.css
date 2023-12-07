@@ -14,6 +14,15 @@
   margin: 0 auto;
 }
 
+.bees-animation {
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  position: absolute;
+  left: 0;
+  top: 25%;
+}
+
 .about-p-div {
   position: absolute;
   width: 30rem;
@@ -55,6 +64,7 @@
 
 .about-decorative-img {
   width: 100%;
+  z-index: -99;
 }
 
 .about-decorative-div-position-1 {

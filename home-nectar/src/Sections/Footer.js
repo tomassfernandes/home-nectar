@@ -34,7 +34,7 @@ export default function Footer() {
   );
 
   return (
-    <footer className="footer">
+    <footer id="footer" className="footer">
       <div className="footer-main-div">
         <div className="footer-grid">
           <div className="footer-div">

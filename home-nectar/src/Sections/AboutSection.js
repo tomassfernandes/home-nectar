@@ -1,6 +1,43 @@
+import Lottie from "lottie-react";
+import animationData from "../assets/bees-animation.json";
+import ScrollTrigger from "react-scroll-trigger";
+import { useState, useEffect } from "react";
+
 export default function AboutSection() {
+  const [isAnimationVisible, setIsAnimationVisible] = useState(false);
+
+  const handleScroll = () => {
+    const element = document.querySelector(".bees-animation");
+    if (element) {
+      const rect = element.getBoundingClientRect();
+      const windowHeight =
+        window.innerHeight || document.documentElement.clientHeight;
+      const visibility = (windowHeight - rect.top) / windowHeight;
+
+      if (visibility >= 0.6 && !isAnimationVisible) {
+        setIsAnimationVisible(true);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <section className="about-section">
+    <section id="about-section" className="about-section">
+      <ScrollTrigger className="bees-animation">
+        {isAnimationVisible && (
+          <Lottie
+            loop={false}
+            animationData={animationData}
+            isStopped={!isAnimationVisible}
+          />
+        )}
+      </ScrollTrigger>
       <h2 className="heading-secondary">About</h2>
       <div className="section about-main-div">
         <div className="about-p-div about-p-div-1">

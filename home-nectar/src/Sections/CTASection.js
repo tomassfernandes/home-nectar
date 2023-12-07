@@ -1,5 +1,6 @@
 import CartIcon from "../Items/CartIcon";
 import CartSection from "./CartSection";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 export default function CTASection({ openCartSection }) {
   return (
@@ -8,10 +9,21 @@ export default function CTASection({ openCartSection }) {
       <div className="section cta-content-section">
         <CartIcon onClick={openCartSection} />
         <nav className="nav">
-          <a className="nav-link">About</a>
-          <a className="nav-link">Honey</a>
-          <a className="nav-link">Farm</a>
-          <a className="nav-link">Contact</a>
+          <ScrollLink to="about-section" smooth={true} duration={500}>
+            <div className="nav-link">About</div>
+          </ScrollLink>
+
+          <ScrollLink to="honey-section" smooth={true} duration={500}>
+            <div className="nav-link">Honey</div>
+          </ScrollLink>
+
+          <ScrollLink to="farm-section" smooth={true} duration={500}>
+            <div className="nav-link">Farm</div>
+          </ScrollLink>
+
+          <ScrollLink to="footer" smooth={true} duration={500}>
+            <div className="nav-link">Contact</div>
+          </ScrollLink>
         </nav>
         <div className="cta-grid">
           <div className="cta-text-div">

@@ -33,7 +33,7 @@ export default function BeeFarmSection() {
   );
 
   return (
-    <section className="bee-farm-background">
+    <section id="farm-section" className="bee-farm-background">
       <img
         className="farm-background-img"
         src="/img/Farm-background.png"
