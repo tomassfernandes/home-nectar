@@ -38,10 +38,12 @@ export default function AboutSection() {
           />
         )}
       </ScrollTrigger>
-      <h2 className="heading-secondary">About</h2>
+      <h2 className="heading-secondary about-heading">About</h2>
       <div className="section about-main-div">
         <div className="about-p-div about-p-div-1">
-          <h3 className="heading-terciary">Who we are</h3>
+          <h3 className="heading-terciary heading-terciary-about">
+            Who we are
+          </h3>
           <p className="about-p">
             Our community of beekeepers and nature advocates is committed to
             sustainable practices and ethical beekeeping. Each jar of{" "}
@@ -52,7 +54,9 @@ export default function AboutSection() {
         </div>
 
         <div className="about-p-div about-p-div-2">
-          <h3 className="heading-terciary">Goals and Objectives</h3>
+          <h3 className="heading-terciary heading-terciary-about">
+            Goals and Objectives
+          </h3>
           <ul className="about-ul">
             <li className="about-p">
               Prioritize the health of bee colonies and their habitats through
@@ -70,7 +74,9 @@ export default function AboutSection() {
         </div>
 
         <div className="about-p-div about-p-div-3">
-          <h3 className="heading-terciary">Our Vision</h3>
+          <h3 className="heading-terciary heading-terciary-about">
+            Our Vision
+          </h3>
           <p className="about-p">
             We strive to be global advocates for environmental responsibility,
             inspiring a future where sustainable practices are the norm. Through

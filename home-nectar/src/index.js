@@ -11,6 +11,8 @@ import "./CSS/choose-us-section.css";
 import "./CSS/footer.css";
 import "./CSS/cart-section.css";
 
+import "./CSS/queries/about-section-queries.css";
+
 import "./CSS/product-page.css";
 
 import { CartProvider } from "./CartContext";
