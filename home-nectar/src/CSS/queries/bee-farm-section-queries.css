@@ -1,0 +1,20 @@
+@media (max-width: 76em) {
+  .farm-background-img {
+    height: 100%;
+  }
+}
+
+@media (max-width: 44em) {
+  .bee-farm-grid {
+    width: 90%;
+  }
+}
+
+@media (max-width: 32em) {
+  .bee-farm-grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    gap: 2.4rem;
+    width: 70%;
+  }
+}

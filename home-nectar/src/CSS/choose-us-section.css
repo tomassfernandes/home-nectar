@@ -79,6 +79,12 @@
   line-height: 1.5;
 }
 
+.choose-us-img-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .choose-us-img {
   width: 100%;
   box-shadow: 0 0 15px rgba(233, 171, 23, 0.8);

@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 export default function BeeFarmSection() {
   const beeIcon = (
     <svg
@@ -32,11 +34,32 @@ export default function BeeFarmSection() {
     </svg>
   );
 
+  const [isNarrowScreen, setIsNarrowScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsNarrowScreen(window.innerWidth <= 39 * 16); // 1 em = 16 pixels
+    };
+
+    handleResize(); // Set initial screen width
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      // Cleanup the event listener when the component unmounts
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section id="farm-section" className="bee-farm-background">
       <img
         className="farm-background-img"
-        src="/img/Farm-background.png"
+        src={
+          isNarrowScreen
+            ? "/img/farm-background-phone.png"
+            : "/img/Farm-background.png"
+        }
         alt="Background lines"
       />
       <div className="section bee-farm-section">

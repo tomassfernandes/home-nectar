@@ -14,6 +14,8 @@ import "./CSS/cart-section.css";
 import "./CSS/queries/about-section-queries.css";
 import "./CSS/queries/cta-section-queries.css";
 import "./CSS/queries/honey-section-queries.css";
+import "./CSS/queries/bee-farm-section-queries.css";
+import "./CSS/queries/choose-us-section-queries.css";
 
 import "./CSS/product-page.css";
 

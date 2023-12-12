@@ -1,0 +1,33 @@
+@media (max-width: 55em) {
+  .choose-us-grid {
+    width: 95%;
+  }
+
+  .choose-us-selection-div {
+    width: 95%;
+  }
+}
+
+@media (max-width: 44em) {
+  .choose-us-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .choose-us-img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 28em) {
+  .choose-us-selection-div {
+    gap: 0.2rem;
+  }
+
+  .choose-us-h3 {
+    font-size: 1.2rem;
+  }
+
+  .choose-us-text-div {
+    padding: 0.8rem;
+  }
+}
