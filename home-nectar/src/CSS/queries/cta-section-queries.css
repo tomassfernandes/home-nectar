@@ -1,0 +1,35 @@
+@media (max-width: 76em) {
+  .cta-content-section {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 68em) {
+  .cta-content-section {
+    padding: 3.2rem;
+  }
+
+  .cta-text-div {
+    margin-bottom: 4.6rem;
+  }
+
+  .cta-content-section .cart-icon-main-div {
+    top: 2.4rem;
+    right: 12rem;
+  }
+}
+
+@media (max-width: 53em) {
+  .cta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-text-div {
+    align-items: center;
+  }
+
+  .heading-primary {
+    text-align: center;
+  }
+}
