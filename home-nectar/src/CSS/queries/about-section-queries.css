@@ -75,6 +75,12 @@
   }
 }
 
+@media (max-width: 53em) {
+  .about-section {
+    margin-top: -40rem;
+  }
+}
+
 @media (max-width: 47em) {
   .about-p-div {
     width: 20rem;

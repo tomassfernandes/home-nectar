@@ -1,14 +1,56 @@
 import CartIcon from "../Items/CartIcon";
 import CartSection from "./CartSection";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import { useRef } from "react";
 
 export default function CTASection({ openCartSection }) {
+  const menuIcon = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="ionicon"
+      viewBox="0 0 512 512"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-miterlimit="10"
+        stroke-width="32"
+        d="M80 160h352M80 256h352M80 352h352"
+      />
+    </svg>
+  );
+
+  const closeIcon = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="ionicon"
+      viewBox="0 0 512 512"
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="32"
+        d="M368 368L144 144M368 144L144 368"
+      />
+    </svg>
+  );
+
+  const navRef = useRef();
+
+  const showNavBar = () => {
+    navRef.current.classList.toggle("responsive-nav");
+  };
+
   return (
     <section>
       <CartSection />
       <div className="section cta-content-section">
         <CartIcon onClick={openCartSection} />
-        <nav className="nav">
+
+        <nav ref={navRef} className="nav">
           <ScrollLink to="about-section" smooth={true} duration={500}>
             <div className="nav-link">About</div>
           </ScrollLink>
@@ -24,7 +66,15 @@ export default function CTASection({ openCartSection }) {
           <ScrollLink to="footer" smooth={true} duration={500}>
             <div className="nav-link">Contact</div>
           </ScrollLink>
+          <button className="nav-btn nav-close-btn" onClick={showNavBar}>
+            {closeIcon}
+          </button>
         </nav>
+
+        <button className="nav-btn" onClick={showNavBar}>
+          {menuIcon}
+        </button>
+
         <div className="cta-grid">
           <div className="cta-text-div">
             <h1 className="heading-primary">

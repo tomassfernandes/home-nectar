@@ -32,4 +32,56 @@
   .heading-primary {
     text-align: center;
   }
+
+  .blue-background-div {
+    height: 60rem;
+    top: -50rem;
+  }
+}
+
+@media (max-width: 44em) {
+  .cta-content-section .cart-icon-main-div {
+    top: 2.4rem;
+    right: 6rem;
+  }
+}
+
+@media (max-width: 35em) {
+  .cta-content-section .nav-btn {
+    display: block;
+  }
+
+  .cta-content-section nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3.6rem;
+    background-color: rgba(0, 0, 0, 0.824);
+    transition: 1s;
+    transform: translateY(-100vh);
+    z-index: 1000;
+  }
+
+  .cta-content-section .responsive-nav {
+    transform: none;
+    z-index: 1000;
+  }
+
+  .responsive-nav .nav-link {
+    color: white;
+    border: none;
+  }
+
+  .responsive-nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: white;
+  }
 }

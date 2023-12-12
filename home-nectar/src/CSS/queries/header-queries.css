@@ -1,0 +1,37 @@
+@media (max-width: 32em) {
+  .logo-div {
+    gap: 6rem;
+  }
+}
+
+@media (max-width: 23em) {
+  .logo-img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .logo-div {
+    gap: 6rem;
+  }
+
+  .bee-img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 20em) {
+  .logo-img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .logo-div {
+    gap: 3rem;
+  }
+
+  .bee-img {
+    width: 3rem;
+    height: 3rem;
+  }
+}

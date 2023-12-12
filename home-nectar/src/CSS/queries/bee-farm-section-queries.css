@@ -18,3 +18,9 @@
     width: 70%;
   }
 }
+
+@media (max-width: 23em) {
+  .bee-farm-grid {
+    width: 95%;
+  }
+}

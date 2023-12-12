@@ -157,3 +157,13 @@
 .custom-shape-divider-top-1701103328 .shape-fill {
   fill: white;
 }
+
+.cta-content-section .nav-btn {
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  background: none;
+  color: #333;
+  border: none;
+  display: none;
+}
