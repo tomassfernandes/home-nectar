@@ -13,6 +13,7 @@ import "./CSS/cart-section.css";
 
 import "./CSS/queries/about-section-queries.css";
 import "./CSS/queries/cta-section-queries.css";
+import "./CSS/queries/honey-section-queries.css";
 
 import "./CSS/product-page.css";
 

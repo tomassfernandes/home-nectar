@@ -1,0 +1,24 @@
+@media (max-width: 55em) {
+  .honey-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .honey-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .honey-div {
+    margin: 0 auto;
+    width: 60%;
+  }
+}
+
+@media (max-width: 34em) {
+  .honey-div {
+    width: 85%;
+  }
+}
