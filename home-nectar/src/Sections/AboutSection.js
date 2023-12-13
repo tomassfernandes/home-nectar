@@ -25,7 +25,7 @@ export default function AboutSection() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
 
   return (
     <section id="about-section" className="about-section">

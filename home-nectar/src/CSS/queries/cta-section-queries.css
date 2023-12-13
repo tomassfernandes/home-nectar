@@ -15,7 +15,7 @@
   }
 
   .cta-content-section .cart-icon-main-div {
-    top: 2.4rem;
+    top: 2.8rem;
     right: 12rem;
   }
 }
@@ -41,12 +41,17 @@
 
 @media (max-width: 44em) {
   .cta-content-section .cart-icon-main-div {
-    top: 2.4rem;
+    top: 2.8rem;
     right: 6rem;
   }
 }
 
 @media (max-width: 35em) {
+  .cta-content-section .cart-icon-main-div {
+    top: 3rem;
+    right: 6rem;
+  }
+
   .cta-content-section .nav-btn {
     display: block;
   }
@@ -83,5 +88,22 @@
     top: 2rem;
     right: 2rem;
     color: white;
+  }
+}
+
+@media (max-width: 23em) {
+  .cta-content-section .cart-icon-main-div {
+    top: 3.1rem;
+    right: 6rem;
+  }
+}
+
+@media (max-width: 20em) {
+  .heading-primary {
+    font-size: 4.2rem;
+  }
+
+  .cta-img {
+    width: 100%;
   }
 }

@@ -86,7 +86,9 @@ export default function CTASection({ openCartSection }) {
               goodness of nature, creating moments of delight with every golden
               drop. Join us on this sweet journey!
             </p>
-            <button className="cta-btn">Find More</button>
+            <ScrollLink to="about-section" smooth={true} duration={500}>
+              <button className="cta-btn">Find More</button>
+            </ScrollLink>
           </div>
           <div className="cta-img-div">
             <img

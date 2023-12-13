@@ -1,0 +1,30 @@
+@media (max-width: 70em) {
+  .cart-section {
+    width: 50%;
+  }
+}
+
+@media (max-width: 39em) {
+  .cart-content-main-div {
+    flex-direction: column;
+    margin-top: 3.6rem;
+  }
+}
+
+@media (max-width: 32em) {
+  .cart-section {
+    width: 65%;
+  }
+}
+
+@media (max-width: 25em) {
+  .cart-section {
+    width: 80%;
+  }
+}
+
+@media (max-width: 20em) {
+  .cart-section {
+    width: 100%;
+  }
+}

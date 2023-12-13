@@ -18,6 +18,8 @@ import "./CSS/queries/honey-section-queries.css";
 import "./CSS/queries/bee-farm-section-queries.css";
 import "./CSS/queries/choose-us-section-queries.css";
 import "./CSS/queries/footer-queries.css";
+import "./CSS/queries/cart-section-queries.css";
+import "./CSS/queries/product-page-queries.css";
 
 import "./CSS/product-page.css";
 
